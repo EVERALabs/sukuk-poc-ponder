@@ -8,9 +8,11 @@
   },
   "dependencies": {
     "@ponder/core": "^0.7.17",
+    "dotenv": "^17.2.0",
     "viem": "^2.33.0"
   },
   "devDependencies": {
+    "@types/node": "^24.1.0",
     "typescript": "^5.8.3"
   }
 }

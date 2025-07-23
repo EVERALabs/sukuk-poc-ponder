@@ -1,11 +1,18 @@
 import { createConfig } from "@ponder/core";
 import { http } from "viem";
+import { config } from "dotenv";
+
+// Load environment variables from .env file
+config();
+
+const DATABASE_URL = process.env.DATABASE_URL!;
+const RPC_URL = process.env.PONDER_RPC_URL_BASE_SEPOLIA!; 
 
 export default createConfig({
   networks: {
     baseSepolia: {
       chainId: 84532,
-      transport: http("https://base-sepolia.g.alchemy.com/v2/4GpFtglvPYTbBRHabUEOk"),
+      transport: http(RPC_URL),
     },
   },
   contracts: {
@@ -68,6 +75,6 @@ export default createConfig({
   },
   database: {
     kind: "postgres",
-    connectionString: "postgresql://postgres:postgres@localhost:5432/sukuk_poc",
+    connectionString: DATABASE_URL,
   },
 });
