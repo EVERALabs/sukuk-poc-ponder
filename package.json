@@ -1,0 +1,16 @@
+{
+  "name": "sukuk-indexer-minimal",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "ponder dev",
+    "start": "ponder start"
+  },
+  "dependencies": {
+    "@ponder/core": "^0.7.17",
+    "viem": "^2.33.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
