@@ -72,6 +72,75 @@ export default createConfig({
       network: "baseSepolia",
       startBlock: 28715800,
     },
+    SukukManager: {
+      abi: [
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "buyer",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "sukuk",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "paymentToken",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "SukukPurchased",
+          "type": "event"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "sukuk",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "paymentToken",
+              "type": "address"
+            }
+          ],
+          "name": "RedemptionRequested",
+          "type": "event"
+        }
+      ],
+      address: "0x8CA16A9e3D0A80734f3A3eDEA5cd6Db510F2F77C", // SukukManager on Base Sepolia
+      network: "baseSepolia",
+      startBlock: 28715800,
+    },
   },
   database: {
     kind: "postgres",
